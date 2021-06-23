@@ -1,0 +1,108 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	user-select: none;
+}
+body {
+	height: 100vh;
+	width: 100%;
+	background-image: linear-gradient(
+		to right bottom,
+		rgb(243, 47, 145) 30%,
+		rgb(88, 10, 141)
+	);
+}
+.name {
+	width: 100%;
+	position: absolute;
+}
+.initial {
+	height: 100vh;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.initial .main {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	height: 80vh;
+	width: 80vw;
+	border-radius: 20px;
+	background-image: linear-gradient(
+		140deg,
+		rgba(255, 255, 255, 0.15) 20%,
+		rgba(255, 255, 255, 0.5),
+		rgba(255, 255, 255, 0.15) 25%,
+		rgba(255, 255, 255, 0.15) 65%,
+		rgba(255, 255, 255, 0.5),
+		rgba(255, 255, 255, 0.15) 70%
+	);
+}
+
+.initial .main .left {
+	border-radius: 10px;
+	height: 90%;
+	width: 45%;
+	background: rgba(255, 255, 255, 0.6);
+}
+.initial .main .right {
+	border-radius: 10px;
+	height: 90%;
+	width: 45%;
+	background: rgba(255, 255, 255, 0.2);
+}
+
+.initial .main .left .crt {
+	margin-left: 50%;
+	transform: translate(-50%, -50%);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 120px;
+	background-color: deeppink;
+	border-radius: 20px;
+}
+.initial .main .right .crt {
+	margin-left: 50%;
+	transform: translate(-50%, -50%);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 120px;
+	background-color: deeppink;
+	border-radius: 20px;
+	z-index: 1;
+}
+.initial .main .left .hld {
+	margin-left: 50%;
+	transform: translate(-50%, -50%);
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.initial .main .right .hld {
+	margin-left: 50%;
+	transform: translate(-50%, -50%);
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.initial .main .controls {
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	border-radius: 20px;
+	background-color: rgba(248, 10, 137, 0.5);
+	z-index: 0;
+}
+
+.initial .main .controls .roll {
+	cursor: pointer;
+	border-radius: 10px;
+	margin-top: 100px;
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- bootstrap page -->
+		<link rel="stylesheet" href="/assets/css/bootstrap.css" />
+		<title>Roll the Dice</title>
+		<link rel="stylesheet" href="/style/style.css" />
+	</head>
+	<body>
+		<div class="name">
+			<h1 class="shadow-lg text-center fs-1 fw-bolder lh-base">
+				Roll the Dice
+			</h1>
+		</div>
+		<div class="initial">
+			<div class="main">
+				<div class="left">
+					<h1 class="text-center shadow pb-3 fw-bold">player 1</h1>
+					<h2 class="text-center mt-5">000</h2>
+					<div class="crt h-25">
+						<h1>000</h1>
+					</div>
+					<h1
+						onclick="myFunc()"
+						class="hld btn-outline-dark btn-light text-center w-25"
+					>
+						Hold
+					</h1>
+				</div>
+				<div class="right">
+					<h1 class="text-center shadow pb-3 fw-bold">player 2</h1>
+					<h2 class="text-center mt-5">000</h2>
+					<div class="crt h-25">
+						<h1>000</h1>
+					</div>
+
+					<h1
+						onclick=""
+						class="hld btn-outline-dark btn-light text-center w-25"
+					>
+						Hold
+					</h1>
+				</div>
+				<div class="controls h-50 w-25">
+					<img src="/img/dice-1.png" alt="roll" class="h-25" />
+					<h1
+						onclick=""
+						class="roll btn-outline-danger btn-light text-center w-25"
+					>
+						Roll
+					</h1>
+				</div>
+			</div>
+		</div>
+		<div class="pop"></div>
+		<script src="/js/app.js"></script>
+	</body>
+</html>
