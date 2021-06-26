@@ -8,6 +8,8 @@ let mScr1 = document.getElementById('main2');
 let pl0h = document.getElementById('pl1h');
 let pl1h = document.getElementById('pl2h');
 let roll = document.getElementById('roll');
+let pop = document.getElementById('pop');
+let winner = document.getElementById('winner');
 
 let rollDice = () => {
 	let nu = Math.floor(Math.random() * 6 + 1);
@@ -33,6 +35,8 @@ let holdFunc = (crt, mcr) => {
 
 let turn = 0;
 const mainfunc = () => {
+	pl0h.style = 'text-decoration:underline;';
+
 	roll.addEventListener('click', () => {
 		if (turn === 0) {
 			pl0h.style = 'text-decoration:underline;';
@@ -44,7 +48,8 @@ const mainfunc = () => {
 		if (turn === 0) {
 			addCrt(crtScr0);
 			let newval = parseInt(crtScr0.innerHTML);
-			if (newval > 21) {
+
+			if (newval >= 21) {
 				turn = 1;
 				pl0h.style = 'text-decoration:none';
 				pl1h.style = 'text-decoration:underline';
@@ -58,11 +63,16 @@ const mainfunc = () => {
 				pl1h.style = 'text-decoration:underline';
 				crtScr0.innerHTML = 0;
 				dice.src = `/img/dice-1.png`;
+				let mainval = parseInt(mScr0.innerHTML);
+				if (mainval >= 100) {
+					pop.style = 'display:flex;';
+					winner.innerHTML = 'player 1 is Winner';
+				}
 			});
 		} else if (turn === 1) {
 			addCrt(crtScr1);
 			let newval = parseInt(crtScr1.innerHTML);
-			if (newval > 21) {
+			if (newval >= 21) {
 				turn = 0;
 				crtScr1.innerHTML = 0;
 				dice.src = `/img/dice-1.png`;
@@ -76,6 +86,11 @@ const mainfunc = () => {
 				dice.src = `/img/dice-1.png`;
 				pl0h.style = 'text-decoration:underline;';
 				pl1h.style = 'text-decoration:none';
+				let mainval = parseInt(mScr1.innerHTML);
+				if (mainval >= 100) {
+					pop.style = 'display:flex;';
+					winner.innerHTML = 'player 2 is Winner';
+				}
 			});
 		}
 	});
