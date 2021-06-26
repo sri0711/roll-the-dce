@@ -46,12 +46,16 @@ const mainfunc = () => {
 			let newval = parseInt(crtScr0.innerHTML);
 			if (newval > 21) {
 				turn = 1;
+				pl0h.style = 'text-decoration:none';
+				pl1h.style = 'text-decoration:underline';
 				crtScr0.innerHTML = 0;
 				dice.src = `/img/dice-1.png`;
 			}
 			hold0.addEventListener('click', () => {
 				holdFunc(crtScr0, mScr0);
 				turn = 1;
+				pl0h.style = 'text-decoration:none';
+				pl1h.style = 'text-decoration:underline';
 				crtScr0.innerHTML = 0;
 				dice.src = `/img/dice-1.png`;
 			});
@@ -62,12 +66,16 @@ const mainfunc = () => {
 				turn = 0;
 				crtScr1.innerHTML = 0;
 				dice.src = `/img/dice-1.png`;
+				pl0h.style = 'text-decoration:underline;';
+				pl1h.style = 'text-decoration:none';
 			}
 			hold1.addEventListener('click', () => {
 				holdFunc(crtScr1, mScr1);
 				turn = 0;
 				crtScr1.innerHTML = 0;
 				dice.src = `/img/dice-1.png`;
+				pl0h.style = 'text-decoration:underline;';
+				pl1h.style = 'text-decoration:none';
 			});
 		}
 	});
