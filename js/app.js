@@ -15,7 +15,7 @@ let right = document.getElementById('right');
 
 let rollDice = () => {
 	let nu = Math.floor(Math.random() * 6 + 1);
-	dice.src = `/img/dice-${nu}.png`;
+	dice.src = `/img/dice-${nu}.svg`;
 	return nu;
 };
 
@@ -50,7 +50,7 @@ const mainfunc = () => {
 				turn = 1;
 
 				crtScr0.innerHTML = 0;
-				dice.src = `/img/dice-1.png`;
+				dice.src = `/img/dice-1.svg`;
 			}
 
 			hold0.addEventListener('click', () => {
@@ -58,7 +58,7 @@ const mainfunc = () => {
 				turn = 1;
 
 				crtScr0.innerHTML = 0;
-				dice.src = `/img/dice-1.png`;
+				dice.src = `/img/dice-1.svg`;
 
 				let mainval = parseInt(mScr0.innerHTML);
 
@@ -76,7 +76,7 @@ const mainfunc = () => {
 				turn = 0;
 
 				crtScr1.innerHTML = 0;
-				dice.src = `/img/dice-1.png`;
+				dice.src = `/img/dice-1.svg`;
 			}
 
 			hold1.addEventListener('click', () => {
@@ -84,7 +84,7 @@ const mainfunc = () => {
 				turn = 0;
 
 				crtScr1.innerHTML = 0;
-				dice.src = `/img/dice-1.png`;
+				dice.src = `/img/dice-1.svg`;
 
 				let mainval = parseInt(mScr1.innerHTML);
 
